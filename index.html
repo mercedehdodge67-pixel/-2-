@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>بازی آموزشی ضرب عدد در بردار</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="page">
+    <header class="top">
+      <h1>بازی آموزشی ضرب عدد در بردار</h1>
+      <p class="subtitle">مختصات بردار را وارد کن، ضریب را تعیین کن و ببین بردار چگونه تغییر می‌کند</p>
+    </header>
+
+    <section class="game-card" role="application" aria-label="بازی ضرب عدد در بردار">
+      <div id="sketch-holder" class="canvas-wrap" aria-hidden="false"></div>
+
+      <form id="controls" class="controls" onsubmit="return false;">
+        <div class="row">
+          <label for="name">نام بردار</label>
+          <input id="name" name="name" type="text" maxlength="2" value="A" aria-label="نام بردار">
+        </div>
+
+        <div class="row">
+          <label for="x">x</label>
+          <input id="x" name="x" type="number" step="any" value="3" aria-label="مقدار x">
+          <label for="y">y</label>
+          <input id="y" name="y" type="number" step="any" value="4" aria-label="مقدار y">
+        </div>
+
+        <div class="row">
+          <label for="k">ضریب (k)</label>
+          <input id="k" name="k" type="number" step="any" value="2" aria-label="ضریب k">
+        </div>
+
+        <div class="row actions">
+          <button id="calcBtn" class="btn primary" type="button">محاسبه</button>
+          <button id="resetBtn" class="btn" type="button">بازنشانی</button>
+        </div>
+
+        <p id="resultText" class="result" aria-live="polite">بردار جدید: 2A = (6, 8)</p>
+      </form>
+    </section>
+
+    <footer class="foot">
+      <small>طراحی آموزشی — مناسب پایه هشتم</small>
+    </footer>
+  </main>
+
+  <!-- p5.js (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
